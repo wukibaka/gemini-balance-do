@@ -14,7 +14,7 @@ const fixCors = ({ headers, status, statusText }: { headers?: HeadersInit; statu
 	const newHeaders = new Headers(headers);
 	newHeaders.set('Access-Control-Allow-Origin', '*');
 	newHeaders.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-	newHeaders.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-goog-api-key');
+	newHeaders.set('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-goog-api-key, x-goog-api-client');
 	return { headers: newHeaders, status, statusText };
 };
 
